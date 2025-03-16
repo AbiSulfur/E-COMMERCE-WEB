@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Sour Gummy", serif;
+}
+
+.navbar {
+  background-color: rgb(39, 39, 39);
+  padding: 0.5rem;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+  color: rgb(59, 59, 59);
+}
+
+.nav-link {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: rgb(126, 126, 126);
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: rgb(67, 153, 86);
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before, .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.hero-section {
+  background: url(gambar/51542.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+}
+
+.hero-section::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-section .container {
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section h1 {
+  font-size: 2em;
+  font-family: "Sour Gummy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content-section {
+  background: url(gambar/7.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-section img{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-section .container {
+  height: 100vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-section h1 {
+  font-size: 1.5em;
+  font-family: "Sour Gummy", serif;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 2;
+}
+
+.content-section p {
+  font-size: 0.7em;
+  font-family: "Sour Gummy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.product{
+  background: url(gambar/721.png) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product p{
+  font-family: "Sour Gummy", serif;
+}
+.product h1{
+  font-family: "Sour Gummy", serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: white;
+}
+.product h5{
+  font-family: "Sour Gummy", serif;
+}
+
+/* Atur ukuran dan tata letak card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%; /* Agar semua card memiliki tinggi yang sama */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Efek hover */
+}
+
+/* Pastikan gambar dalam ukuran seragam */
+.product-img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Mengatur tinggi card-body agar tombol selalu di bawah */
+.product-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Atur tombol agar sejajar */
+.product-card .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Style untuk background section profile */
+.profile {
+  background: url('gambar/71.png') no-repeat center;
+  background-size: cover;
+  padding: 50px 0;
+}
+
+/* Judul section profile */
+.profile h1 {
+  font-family: "Sour Gummy", serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: white;
+}
+
+/* Custom Card Carousel */
+.custom-card {
+  background: rgba(255, 255, 255, 0.9); /* Latar semi-transparan */
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling gambar profile menjadi bundar */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styling konten profile */
+.profile-content h3 {
+  font-family: "Sour Gummy", serif;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile-content p {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 10px;
+  line-height: 1.4;
+}
+
+/* Pastikan Swiper container minimal punya lebar/padding */
+.swiper {
+  width: 100%;
+  padding-bottom: 50px; /* space bawah agar pagination tak menimpa slide */
+  overflow: visible !important;
+}
+
+/* Lebar tiap slide */
+.swiper-slide {
+  width: 280px; /* Silakan sesuaikan lebar card */
+  display: flex; /* Agar konten card terpusat vertikal */
+  justify-content: center;
+  align-items: center;
+}
+
+.footer{
+	background-color: rgb(39, 39, 39);
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: rgb(67, 153, 86);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
